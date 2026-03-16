@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GPS_Listener": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
