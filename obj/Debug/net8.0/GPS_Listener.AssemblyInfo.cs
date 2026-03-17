@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GPS_Listener")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eea393117f22606b9ad6a206c6a5ed2f9f5e72a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("GPS_Listener")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GPS_Listener")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
