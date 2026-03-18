@@ -3,6 +3,7 @@
 //using System.Net.Sockets;
 //using System.Linq;
 //using System.Threading.Tasks;
+//using System.Collections.Generic;
 //using GPS_Listener.Parser;
 //using GPS_Listener.Models;
 
@@ -35,10 +36,14 @@
 
 //        private async Task HandleClient(TcpClient client)
 //        {
+//            var parser = new PacketParser(); // 🔥 per-client parser
+
 //            try
 //            {
 //                var stream = client.GetStream();
 //                byte[] buffer = new byte[1024];
+
+//                List<byte> packetBuffer = new List<byte>(); // 🔥 for fragmentation
 
 //                while (client.Connected)
 //                {
@@ -50,13 +55,38 @@
 //                        break;
 //                    }
 
-//                    byte[] packet = buffer.Take(bytes).ToArray();
+//                    // Add incoming data to buffer
+//                    packetBuffer.AddRange(buffer.Take(bytes));
 
-//                    Console.WriteLine("\nPacket Received:");
-//                    Console.WriteLine(BitConverter.ToString(packet));
+//                    // 🔥 Process complete packets
+//                    while (packetBuffer.Count >= 5)
+//                    {
+//                        // Check start bytes 0x78 0x78
+//                        if (packetBuffer[0] != 0x78 || packetBuffer[1] != 0x78)
+//                        {
+//                            packetBuffer.RemoveAt(0);
+//                            continue;
+//                        }
 
-//                    // Parse packet
-//                    PacketParser.Parse(packet, client);
+//                        int length = packetBuffer[2];
+
+//                        int fullPacketLength = length + 5;
+//                        // 2(start) + 1(length) + content + 2(stop)
+
+//                        if (packetBuffer.Count < fullPacketLength)
+//                            break; // wait for more data
+
+//                        byte[] packet = packetBuffer.Take(fullPacketLength).ToArray();
+
+//                        Console.WriteLine("\nPacket Received:");
+//                        Console.WriteLine(BitConverter.ToString(packet));
+
+//                        // Parse packet
+//                        parser.Parse(packet, client);
+
+//                        // Remove processed packet
+//                        packetBuffer.RemoveRange(0, fullPacketLength);
+//                    }
 //                }
 //            }
 //            catch (Exception ex)
@@ -100,7 +130,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Collections.Generic;
+using System.IO;
 using GPS_Listener.Parser;
 using GPS_Listener.Models;
 
@@ -133,56 +163,63 @@ namespace GPS_Listener.Listener
 
         private async Task HandleClient(TcpClient client)
         {
-            var parser = new PacketParser(); // 🔥 per-client parser
+            var parser = new PacketParser();
 
             try
             {
                 var stream = client.GetStream();
                 byte[] buffer = new byte[1024];
 
-                List<byte> packetBuffer = new List<byte>(); // 🔥 for fragmentation
+                using var ms = new MemoryStream();
 
                 while (client.Connected)
                 {
-                    int bytes = await stream.ReadAsync(buffer, 0, buffer.Length);
+                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
 
-                    if (bytes == 0)
+                    if (bytesRead == 0)
                     {
                         Console.WriteLine("Device Disconnected (No Data)");
                         break;
                     }
 
-                    // Add incoming data to buffer
-                    packetBuffer.AddRange(buffer.Take(bytes));
+                    // Append data
+                    ms.Write(buffer, 0, bytesRead);
 
-                    // 🔥 Process complete packets
-                    while (packetBuffer.Count >= 5)
+                    while (true)
                     {
-                        // Check start bytes 0x78 0x78
-                        if (packetBuffer[0] != 0x78 || packetBuffer[1] != 0x78)
+                        byte[] data = ms.ToArray();
+
+                        if (data.Length < 5)
+                            break;
+
+                        // Validate start bytes
+                        if (data[0] != 0x78 || data[1] != 0x78)
                         {
-                            packetBuffer.RemoveAt(0);
-                            continue;
+                            Console.WriteLine("Invalid start bytes, clearing buffer");
+                            ms.SetLength(0);
+                            break;
                         }
 
-                        int length = packetBuffer[2];
-
+                        int length = data[2];
                         int fullPacketLength = length + 5;
-                        // 2(start) + 1(length) + content + 2(stop)
 
-                        if (packetBuffer.Count < fullPacketLength)
-                            break; // wait for more data
+                        if (data.Length < fullPacketLength)
+                            break;
 
-                        byte[] packet = packetBuffer.Take(fullPacketLength).ToArray();
+                        // Extract packet
+                        byte[] packet = data.Take(fullPacketLength).ToArray();
 
                         Console.WriteLine("\nPacket Received:");
                         Console.WriteLine(BitConverter.ToString(packet));
 
-                        // Parse packet
+                        // Parse
                         parser.Parse(packet, client);
 
                         // Remove processed packet
-                        packetBuffer.RemoveRange(0, fullPacketLength);
+                        byte[] remaining = data.Skip(fullPacketLength).ToArray();
+
+                        ms.SetLength(0);
+                        ms.Write(remaining, 0, remaining.Length);
                     }
                 }
             }
@@ -199,17 +236,15 @@ namespace GPS_Listener.Listener
             }
         }
 
-        // 🔥 Session cleanup on disconnect
+        // 🔥 OPTIMIZED REMOVE SESSION (O(1))
         private void RemoveSession(TcpClient client)
         {
-            var session = SessionManager.Sessions.Values
-                .FirstOrDefault(x => x.Client == client);
-
-            if (session != null)
+            // direct lookup (no LINQ)
+            if (SessionManager.ClientMap.TryRemove(client, out string imei))
             {
-                SessionManager.Sessions.TryRemove(session.Imei, out _);
+                SessionManager.Sessions.TryRemove(imei, out _);
 
-                Console.WriteLine($"Device Removed: {session.Imei}");
+                Console.WriteLine($"Device Removed: {imei}");
                 Console.WriteLine($"Active Devices: {SessionManager.Sessions.Count}");
             }
             else

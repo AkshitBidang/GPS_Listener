@@ -1,0 +1,214 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Work\\GPS_Listener\\GPS_Listener\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\listener\\tcpgpslistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:listener\\tcpgpslistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\parser\\packetparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:parser\\packetparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\parser\\filename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:parser\\filename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\models\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:models\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\models\\locationentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:models\\locationentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\models\\devicesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:models\\devicesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\handlers\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:handlers\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\handlers\\locationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:handlers\\locationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\handlers\\heartbeathandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:handlers\\heartbeathandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\data\\gpsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:data\\gpsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|c:\\work\\gps_listener\\gps_listener\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B9F95FD-17BC-895A-31F0-9B0E7AF0F685}|GPS_Listener.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PacketParser.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Parser\\PacketParser.cs",
+              "RelativeDocumentMoniker": "Parser\\PacketParser.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Parser\\PacketParser.cs",
+              "RelativeToolTip": "Parser\\PacketParser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:10:09.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileName.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Parser\\FileName.cs",
+              "RelativeDocumentMoniker": "Parser\\FileName.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Parser\\FileName.cs",
+              "RelativeToolTip": "Parser\\FileName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:10:08.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SessionManager.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Models\\SessionManager.cs",
+              "RelativeDocumentMoniker": "Models\\SessionManager.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Models\\SessionManager.cs",
+              "RelativeToolTip": "Models\\SessionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:10:03.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LocationEntity.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Models\\LocationEntity.cs",
+              "RelativeDocumentMoniker": "Models\\LocationEntity.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Models\\LocationEntity.cs",
+              "RelativeToolTip": "Models\\LocationEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:10:02.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DeviceSession.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Models\\DeviceSession.cs",
+              "RelativeDocumentMoniker": "Models\\DeviceSession.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Models\\DeviceSession.cs",
+              "RelativeToolTip": "Models\\DeviceSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:10:02.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TcpGpsListener.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Listener\\TcpGpsListener.cs",
+              "RelativeDocumentMoniker": "Listener\\TcpGpsListener.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Listener\\TcpGpsListener.cs",
+              "RelativeToolTip": "Listener\\TcpGpsListener.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:10:00.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginHandler.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Handlers\\LoginHandler.cs",
+              "RelativeDocumentMoniker": "Handlers\\LoginHandler.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Handlers\\LoginHandler.cs",
+              "RelativeToolTip": "Handlers\\LoginHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:09:57.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LocationHandler.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Handlers\\LocationHandler.cs",
+              "RelativeDocumentMoniker": "Handlers\\LocationHandler.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Handlers\\LocationHandler.cs",
+              "RelativeToolTip": "Handlers\\LocationHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:09:56.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HeartbeatHandler.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Handlers\\HeartbeatHandler.cs",
+              "RelativeDocumentMoniker": "Handlers\\HeartbeatHandler.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Handlers\\HeartbeatHandler.cs",
+              "RelativeToolTip": "Handlers\\HeartbeatHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:09:55.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GpsDbContext.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Data\\GpsDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\GpsDbContext.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Data\\GpsDbContext.cs",
+              "RelativeToolTip": "Data\\GpsDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T09:09:51.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-17T07:31:46.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Work\\GPS_Listener\\GPS_Listener\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Work\\GPS_Listener\\GPS_Listener\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T07:30:44.066Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
